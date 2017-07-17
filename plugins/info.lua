@@ -1,5 +1,4 @@
---Begin info.lua By @SoLiD
-local Solid = 157059515
+local Solid = 115740444
 local function setrank(msg, user_id, value,chat_id)
   local hash = nil
 
@@ -49,7 +48,7 @@ local function info_cb(arg, data)
   local um_hash = 'msgs:'..data.id_..':'..arg.chat_id
   user_info_msgs = tonumber(redis:get(um_hash) or 0)
   text = text..'Total messages : '..user_info_msgs..'\n\n'
-  text = text..'@BeyondTeam'
+  text = text..'@PowerShield_Team'
   tdcli.sendMessage(arg.chat_id, arg.msgid, 0, text, 0, "md")
 end
 tdcli_function ({
@@ -99,7 +98,7 @@ local function info_by_username(arg, data)
   local um_hash = 'msgs:'..data.id_..':'..arg.chat_id
   user_info_msgs = tonumber(redis:get(um_hash) or 0)
   text = text..'Total messages : '..user_info_msgs..'\n\n'
-  text = text..'@BeyondTeam'
+  text = text..'@PowerShield_Team'
   tdcli.sendMessage(arg.chat_id, arg.msgid, 0, text, 0, "md")
    else
    tdcli.sendMessage(arg.chat_id, "", 0, "*User not found*", 0, "md")
@@ -144,7 +143,7 @@ local function info_by_id(arg, data)
   local um_hash = 'msgs:'..data.id_..':'..arg.chat_id
   user_info_msgs = tonumber(redis:get(um_hash) or 0)
   text = text..'Total messages : '..user_info_msgs..'\n\n'
-  text = text..'@BeyondTeam'
+  text = text..'@PowerShield_Team'
   tdcli.sendMessage(arg.chat_id, arg.msgid, 0, text, 0, "md")
    else
    tdcli.sendMessage(arg.chat_id, "", 0, "*User not found*", 0, "md")
@@ -217,7 +216,7 @@ local function info2_cb(arg, data)
   local um_hash = 'msgs:'..data.id_..':'..arg.chat_id
   user_info_msgs = tonumber(redis:get(um_hash) or 0)
   text = text..'Total messages : '..user_info_msgs..'\n\n'
-  text = text..'@BeyondTeam'
+  text = text..'@PowerShield_Team'
   tdcli.sendMessage(arg.chat_id, arg.msgid, 0, text, 0, "md")
    end
 end
